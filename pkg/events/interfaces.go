@@ -4,8 +4,8 @@ import "time"
 
 type EventInterface interface {
 	GetName() string
-	getDateTime() time.Time
-	getPayload() interface{}
+	GetDateTime() time.Time
+	GetPayload() interface{}
 }
 
 type EventHandlerInterface interface {
