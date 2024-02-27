@@ -18,7 +18,7 @@ func main() {
 
 	messages := make(chan amqp.Delivery)
 
-	go rabbitmq.Consume(channel, messages)
+	go rabbitmq.Consume(channel, messages, "queue")
 
 	for msg := range messages {
 		fmt.Println(string(msg.Body))
